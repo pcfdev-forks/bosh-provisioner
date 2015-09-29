@@ -4,9 +4,9 @@ import (
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 
-	bpdep "github.com/cppforlife/bosh-provisioner/deployment"
-	bpindex "github.com/cppforlife/bosh-provisioner/index"
-	bprel "github.com/cppforlife/bosh-provisioner/release"
+	bpdep "github.com/sclevine/bosh-provisioner/deployment"
+	bpindex "github.com/sclevine/bosh-provisioner/index"
+	bprel "github.com/sclevine/bosh-provisioner/release"
 )
 
 type CTTJRepository struct {

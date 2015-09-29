@@ -4,9 +4,9 @@ import (
 	boshas "github.com/cloudfoundry/bosh-agent/agent/applier/applyspec"
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 
-	bpdep "github.com/cppforlife/bosh-provisioner/deployment"
-	bptplcomp "github.com/cppforlife/bosh-provisioner/instance/templatescompiler"
-	bppkgscomp "github.com/cppforlife/bosh-provisioner/packagescompiler"
+	bpdep "github.com/sclevine/bosh-provisioner/deployment"
+	bptplcomp "github.com/sclevine/bosh-provisioner/instance/templatescompiler"
+	bppkgscomp "github.com/sclevine/bosh-provisioner/packagescompiler"
 )
 
 // JobState represents state for a VM

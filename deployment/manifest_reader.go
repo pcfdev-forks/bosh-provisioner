@@ -5,7 +5,7 @@ import (
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 	boshsys "github.com/cloudfoundry/bosh-agent/system"
 
-	bpdepman "github.com/cppforlife/bosh-provisioner/deployment/manifest"
+	bpdepman "github.com/sclevine/bosh-provisioner/deployment/manifest"
 )
 
 type ManifestReader struct {

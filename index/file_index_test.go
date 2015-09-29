@@ -6,7 +6,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cppforlife/bosh-provisioner/index"
+	. "github.com/sclevine/bosh-provisioner/index"
 )
 
 type Key struct {

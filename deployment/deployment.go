@@ -5,7 +5,7 @@ import (
 
 	boshaction "github.com/cloudfoundry/bosh-agent/agent/action"
 
-	bpdepman "github.com/cppforlife/bosh-provisioner/deployment/manifest"
+	bpdepman "github.com/sclevine/bosh-provisioner/deployment/manifest"
 )
 
 type Deployment struct {

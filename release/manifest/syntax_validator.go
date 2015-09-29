@@ -3,7 +3,7 @@ package manifest
 import (
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 
-	bputil "github.com/cppforlife/bosh-provisioner/util"
+	bputil "github.com/sclevine/bosh-provisioner/util"
 )
 
 // SyntaxValidator parses and saves all manifest values to determine

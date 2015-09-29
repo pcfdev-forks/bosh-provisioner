@@ -9,8 +9,8 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	fakebpagclient "github.com/cppforlife/bosh-provisioner/agent/client/fakes"
-	. "github.com/cppforlife/bosh-provisioner/instance/updater"
+	fakebpagclient "github.com/sclevine/bosh-provisioner/agent/client/fakes"
+	. "github.com/sclevine/bosh-provisioner/instance/updater"
 )
 
 var _ = Describe("Waiter", func() {

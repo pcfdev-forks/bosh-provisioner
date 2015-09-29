@@ -3,7 +3,7 @@ package applier
 import (
 	boshas "github.com/cloudfoundry/bosh-agent/agent/applier/applyspec"
 
-	bpdep "github.com/cppforlife/bosh-provisioner/deployment"
+	bpdep "github.com/sclevine/bosh-provisioner/deployment"
 )
 
 // EmptyState represents state for a VM

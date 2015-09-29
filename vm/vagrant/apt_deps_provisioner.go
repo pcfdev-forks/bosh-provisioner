@@ -9,7 +9,7 @@ import (
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 	boshsys "github.com/cloudfoundry/bosh-agent/system"
 
-	bpeventlog "github.com/cppforlife/bosh-provisioner/eventlog"
+	bpeventlog "github.com/sclevine/bosh-provisioner/eventlog"
 )
 
 const (

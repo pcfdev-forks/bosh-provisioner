@@ -5,8 +5,8 @@ import (
 
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 
-	bpdep "github.com/cppforlife/bosh-provisioner/deployment"
-	bpreljob "github.com/cppforlife/bosh-provisioner/release/job"
+	bpdep "github.com/sclevine/bosh-provisioner/deployment"
+	bpreljob "github.com/sclevine/bosh-provisioner/release/job"
 )
 
 type TemplateEvaluationContext struct {
