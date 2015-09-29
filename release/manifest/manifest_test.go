@@ -4,7 +4,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cppforlife/bosh-provisioner/release/manifest"
+	. "github.com/sclevine/bosh-provisioner/release/manifest"
 )
 
 var _ = Describe("Manifest", func() {

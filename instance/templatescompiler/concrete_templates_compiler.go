@@ -7,11 +7,11 @@ import (
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 
-	bpdep "github.com/cppforlife/bosh-provisioner/deployment"
-	bpjobsrepo "github.com/cppforlife/bosh-provisioner/instance/templatescompiler/jobsrepo"
-	bptplsrepo "github.com/cppforlife/bosh-provisioner/instance/templatescompiler/templatesrepo"
-	bprel "github.com/cppforlife/bosh-provisioner/release"
-	bpreljob "github.com/cppforlife/bosh-provisioner/release/job"
+	bpdep "github.com/sclevine/bosh-provisioner/deployment"
+	bpjobsrepo "github.com/sclevine/bosh-provisioner/instance/templatescompiler/jobsrepo"
+	bptplsrepo "github.com/sclevine/bosh-provisioner/instance/templatescompiler/templatesrepo"
+	bprel "github.com/sclevine/bosh-provisioner/release"
+	bpreljob "github.com/sclevine/bosh-provisioner/release/job"
 )
 
 type ConcreteTemplatesCompiler struct {

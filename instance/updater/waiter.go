@@ -6,7 +6,7 @@ import (
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 
-	bpagclient "github.com/cppforlife/bosh-provisioner/agent/client"
+	bpagclient "github.com/sclevine/bosh-provisioner/agent/client"
 )
 
 const waiterLogTag = "Waiter"

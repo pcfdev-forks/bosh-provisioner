@@ -4,8 +4,8 @@ import (
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 	boshsys "github.com/cloudfoundry/bosh-agent/system"
 
-	bpeventlog "github.com/cppforlife/bosh-provisioner/eventlog"
-	bpvm "github.com/cppforlife/bosh-provisioner/vm"
+	bpeventlog "github.com/sclevine/bosh-provisioner/eventlog"
+	bpvm "github.com/sclevine/bosh-provisioner/vm"
 )
 
 type VMProvisionerFactory struct {

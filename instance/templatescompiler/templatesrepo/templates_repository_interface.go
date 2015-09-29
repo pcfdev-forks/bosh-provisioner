@@ -1,7 +1,7 @@
 package templatesrepo
 
 import (
-	bpdep "github.com/cppforlife/bosh-provisioner/deployment"
+	bpdep "github.com/sclevine/bosh-provisioner/deployment"
 )
 
 type TemplateRecord struct {

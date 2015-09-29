@@ -4,10 +4,10 @@ import (
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 
-	bpagclient "github.com/cppforlife/bosh-provisioner/agent/client"
-	bpdep "github.com/cppforlife/bosh-provisioner/deployment"
-	bptplcomp "github.com/cppforlife/bosh-provisioner/instance/templatescompiler"
-	bppkgscomp "github.com/cppforlife/bosh-provisioner/packagescompiler"
+	bpagclient "github.com/sclevine/bosh-provisioner/agent/client"
+	bpdep "github.com/sclevine/bosh-provisioner/deployment"
+	bptplcomp "github.com/sclevine/bosh-provisioner/instance/templatescompiler"
+	bppkgscomp "github.com/sclevine/bosh-provisioner/packagescompiler"
 )
 
 const applierLogTag = "Applier"

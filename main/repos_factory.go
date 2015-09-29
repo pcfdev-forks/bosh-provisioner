@@ -7,12 +7,12 @@ import (
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 	boshsys "github.com/cloudfoundry/bosh-agent/system"
 
-	bpdload "github.com/cppforlife/bosh-provisioner/downloader"
-	bpindex "github.com/cppforlife/bosh-provisioner/index"
-	bpjobsrepo "github.com/cppforlife/bosh-provisioner/instance/templatescompiler/jobsrepo"
-	bptplsrepo "github.com/cppforlife/bosh-provisioner/instance/templatescompiler/templatesrepo"
-	bpcpkgsrepo "github.com/cppforlife/bosh-provisioner/packagescompiler/compiledpackagesrepo"
-	bppkgsrepo "github.com/cppforlife/bosh-provisioner/packagescompiler/packagesrepo"
+	bpdload "github.com/sclevine/bosh-provisioner/downloader"
+	bpindex "github.com/sclevine/bosh-provisioner/index"
+	bpjobsrepo "github.com/sclevine/bosh-provisioner/instance/templatescompiler/jobsrepo"
+	bptplsrepo "github.com/sclevine/bosh-provisioner/instance/templatescompiler/templatesrepo"
+	bpcpkgsrepo "github.com/sclevine/bosh-provisioner/packagescompiler/compiledpackagesrepo"
+	bppkgsrepo "github.com/sclevine/bosh-provisioner/packagescompiler/packagesrepo"
 )
 
 type ReposFactory struct {

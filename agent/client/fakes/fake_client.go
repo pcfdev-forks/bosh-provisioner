@@ -6,7 +6,7 @@ import (
 	boshcomp "github.com/cloudfoundry/bosh-agent/agent/compiler"
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 
-	bpagclient "github.com/cppforlife/bosh-provisioner/agent/client"
+	bpagclient "github.com/sclevine/bosh-provisioner/agent/client"
 )
 
 type FakeClient struct {

@@ -7,9 +7,9 @@ import (
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 	boshsys "github.com/cloudfoundry/bosh-agent/system"
 
-	bpdload "github.com/cppforlife/bosh-provisioner/downloader"
-	bpreljobman "github.com/cppforlife/bosh-provisioner/release/job/manifest"
-	bptar "github.com/cppforlife/bosh-provisioner/tar"
+	bpdload "github.com/sclevine/bosh-provisioner/downloader"
+	bpreljobman "github.com/sclevine/bosh-provisioner/release/job/manifest"
+	bptar "github.com/sclevine/bosh-provisioner/tar"
 )
 
 const tarReaderLogTag = "TarReader"

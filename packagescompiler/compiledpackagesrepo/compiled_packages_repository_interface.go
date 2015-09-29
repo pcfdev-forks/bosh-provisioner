@@ -1,7 +1,7 @@
 package compiledpackagesrepo
 
 import (
-	bprel "github.com/cppforlife/bosh-provisioner/release"
+	bprel "github.com/sclevine/bosh-provisioner/release"
 )
 
 type CompiledPackageRecord struct {

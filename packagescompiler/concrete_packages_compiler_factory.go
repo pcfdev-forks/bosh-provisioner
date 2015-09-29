@@ -4,10 +4,10 @@ import (
 	boshblob "github.com/cloudfoundry/bosh-agent/blobstore"
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 
-	bpagclient "github.com/cppforlife/bosh-provisioner/agent/client"
-	bpeventlog "github.com/cppforlife/bosh-provisioner/eventlog"
-	bpcpkgsrepo "github.com/cppforlife/bosh-provisioner/packagescompiler/compiledpackagesrepo"
-	bppkgsrepo "github.com/cppforlife/bosh-provisioner/packagescompiler/packagesrepo"
+	bpagclient "github.com/sclevine/bosh-provisioner/agent/client"
+	bpeventlog "github.com/sclevine/bosh-provisioner/eventlog"
+	bpcpkgsrepo "github.com/sclevine/bosh-provisioner/packagescompiler/compiledpackagesrepo"
+	bppkgsrepo "github.com/sclevine/bosh-provisioner/packagescompiler/packagesrepo"
 )
 
 type ConcretePackagesCompilerFactory struct {

@@ -8,11 +8,11 @@ import (
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 
-	bpagentclient "github.com/cppforlife/bosh-provisioner/agent/client"
-	bpeventlog "github.com/cppforlife/bosh-provisioner/eventlog"
-	bpcpkgsrepo "github.com/cppforlife/bosh-provisioner/packagescompiler/compiledpackagesrepo"
-	bppkgsrepo "github.com/cppforlife/bosh-provisioner/packagescompiler/packagesrepo"
-	bprel "github.com/cppforlife/bosh-provisioner/release"
+	bpagentclient "github.com/sclevine/bosh-provisioner/agent/client"
+	bpeventlog "github.com/sclevine/bosh-provisioner/eventlog"
+	bpcpkgsrepo "github.com/sclevine/bosh-provisioner/packagescompiler/compiledpackagesrepo"
+	bppkgsrepo "github.com/sclevine/bosh-provisioner/packagescompiler/packagesrepo"
+	bprel "github.com/sclevine/bosh-provisioner/release"
 )
 
 const concretePackagesCompilerLogTag = "ConcretePackagesCompiler"

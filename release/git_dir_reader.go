@@ -7,7 +7,7 @@ import (
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 	boshsys "github.com/cloudfoundry/bosh-agent/system"
 
-	bprelman "github.com/cppforlife/bosh-provisioner/release/manifest"
+	bprelman "github.com/sclevine/bosh-provisioner/release/manifest"
 )
 
 const rawDirReaderLogTag = "DirReader"

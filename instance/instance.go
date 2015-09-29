@@ -4,8 +4,8 @@ import (
 	bosherr "github.com/cloudfoundry/bosh-agent/errors"
 	boshlog "github.com/cloudfoundry/bosh-agent/logger"
 
-	bpdep "github.com/cppforlife/bosh-provisioner/deployment"
-	bpinstupd "github.com/cppforlife/bosh-provisioner/instance/updater"
+	bpdep "github.com/sclevine/bosh-provisioner/deployment"
+	bpinstupd "github.com/sclevine/bosh-provisioner/instance/updater"
 )
 
 const instanceLogTag = "Instance"
