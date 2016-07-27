@@ -22,6 +22,7 @@ type rootContext struct {
 	JobContext jobContext `json:"job"`
 
 	Deployment string `json:"deployment"`
+	Bootstrap  bool   `json:"bootstrap"`
 
 	// Usually is accessed with <%= spec.networks.default.ip %>
 	NetworkContexts map[string]networkContext `json:"networks"`
@@ -65,6 +66,7 @@ func (c TemplateEvaluationContext) MarshalJSON() ([]byte, error) {
 		Index:      c.instance.Index,
 		JobContext: jobContext{Name: c.instance.JobName, Templates: c.buildTemplates()},
 		Deployment: c.instance.DeploymentName,
+		Bootstrap:  true,
 
 		NetworkContexts: c.buildNetworkContexts(),
 		Properties:      properties,
