@@ -15,12 +15,8 @@ const updaterLogTag = "Updater"
 type Updater struct {
 	instanceDesc string
 
-	drainer     Drainer
-	stopper     Stopper
-	applier     bpapplier.Applier
-	starter     Starter
-	waiter      Waiter
-	postStarter PostStarter
+	drainer Drainer
+	applier bpapplier.Applier
 
 	eventLog bpeventlog.Log
 	logger   boshlog.Logger
@@ -29,23 +25,15 @@ type Updater struct {
 func NewUpdater(
 	instanceDesc string,
 	drainer Drainer,
-	stopper Stopper,
 	applier bpapplier.Applier,
-	starter Starter,
-	waiter Waiter,
-	postStarter PostStarter,
 	eventLog bpeventlog.Log,
 	logger boshlog.Logger,
 ) Updater {
 	return Updater{
 		instanceDesc: instanceDesc,
 
-		drainer:     drainer,
-		stopper:     stopper,
-		applier:     applier,
-		starter:     starter,
-		waiter:      waiter,
-		postStarter: postStarter,
+		drainer: drainer,
+		applier: applier,
 
 		eventLog: eventLog,
 		logger:   logger,
@@ -62,27 +50,6 @@ func (u Updater) SetUp() error {
 		return bosherr.WrapError(err, "Applying")
 	}
 
-	task = stage.BeginTask("Starting")
-
-	err = task.End(u.starter.Start())
-	if err != nil {
-		return bosherr.WrapError(err, "Starting")
-	}
-
-	task = stage.BeginTask("Waiting")
-
-	err = task.End(u.waiter.Wait())
-	if err != nil {
-		return bosherr.WrapError(err, "Waiting")
-	}
-
-	task = stage.BeginTask("Post-Start")
-
-	err = task.End(u.postStarter.PostStart())
-	if err != nil {
-		return bosherr.WrapError(err, "Post-Starting")
-	}
-
 	return nil
 }
 
@@ -94,13 +61,6 @@ func (u Updater) TearDown() error {
 	err := task.End(u.drainer.Drain())
 	if err != nil {
 		return bosherr.WrapError(err, "Draining")
-	}
-
-	task = stage.BeginTask("Stopping")
-
-	err = task.End(u.stopper.Stop())
-	if err != nil {
-		return bosherr.WrapError(err, "Stopping")
 	}
 
 	return nil

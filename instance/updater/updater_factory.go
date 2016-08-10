@@ -2,7 +2,6 @@ package updater
 
 import (
 	"fmt"
-	"time"
 
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 
@@ -18,8 +17,9 @@ type Factory struct {
 	templatesCompiler       bptplcomp.TemplatesCompiler
 	packagesCompilerFactory bppkgscomp.ConcretePackagesCompilerFactory
 
-	eventLog bpeventlog.Log
-	logger   boshlog.Logger
+	eventLog  bpeventlog.Log
+	logger    boshlog.Logger
+	skipStart bool
 }
 
 func NewFactory(
@@ -44,8 +44,6 @@ func (f Factory) NewUpdater(
 ) Updater {
 	drainer := NewDrainer(agentClient, f.logger)
 
-	stopper := NewStopper(agentClient, f.logger)
-
 	applier := bpapplier.NewApplier(
 		depJob,
 		instance,
@@ -55,29 +53,10 @@ func (f Factory) NewUpdater(
 		f.logger,
 	)
 
-	starter := NewStarter(agentClient, f.logger)
-
-	waiter := NewWaiter(
-		instance.WatchTime.Start(),
-		instance.WatchTime.End(),
-		time.Sleep,
-		agentClient,
-		f.logger,
-	)
-
-	postStarter := NewPostStarter(
-		agentClient,
-		f.logger,
-	)
-
 	updater := NewUpdater(
 		fmt.Sprintf("%s/%d", instance.JobName, instance.Index),
 		drainer,
-		stopper,
 		applier,
-		starter,
-		waiter,
-		postStarter,
 		f.eventLog,
 		f.logger,
 	)
