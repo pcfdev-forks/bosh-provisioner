@@ -32,11 +32,12 @@ type Release struct {
 
 const (
 	NetworkTypeManual  = bpdepman.NetworkTypeManual
+	NetworkTypeLocal   = bpdepman.NetworkTypeLocal
 	NetworkTypeDynamic = bpdepman.NetworkTypeDynamic
 	NetworkTypeVip     = bpdepman.NetworkTypeVip
 )
 
-var NetworkTypes = []string{NetworkTypeManual, NetworkTypeDynamic, NetworkTypeVip}
+var NetworkTypes = []string{NetworkTypeManual, NetworkTypeLocal, NetworkTypeDynamic, NetworkTypeVip}
 
 type Network struct {
 	Name string

@@ -45,11 +45,12 @@ type Release struct {
 
 const (
 	NetworkTypeManual  = "manual"
+	NetworkTypeLocal   = "local"
 	NetworkTypeDynamic = "dynamic"
 	NetworkTypeVip     = "vip"
 )
 
-var NetworkTypes = []string{NetworkTypeManual, NetworkTypeDynamic, NetworkTypeVip}
+var NetworkTypes = []string{NetworkTypeManual, NetworkTypeLocal, NetworkTypeDynamic, NetworkTypeVip}
 
 type Network struct {
 	Name string `yaml:"name"`

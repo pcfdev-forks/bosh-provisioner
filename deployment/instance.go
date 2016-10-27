@@ -46,6 +46,15 @@ func (i Instance) NetworkConfigurationForNetworkAssociation(na NetworkAssociatio
 		}
 	}
 
+	// Dynamic network information can be resolved after VM is powered on.
+	if na.Network.Type == NetworkTypeLocal {
+		return NetworkConfiguration{
+			IP:      "127.0.0.1",
+			Netmask: "255.0.0.0",
+			Gateway: "",
+		}
+	}
+
 	return NetworkConfiguration{}
 }
 
