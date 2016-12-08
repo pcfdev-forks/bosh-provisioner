@@ -1,6 +1,8 @@
 package erbrenderer_test
 
 import (
+	"encoding/json"
+
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
@@ -188,6 +190,22 @@ var _ = Describe("RenderProperties", func() {
 					}))
 				})
 			})
-		}) //~
+		})
+
+		Context("when a property is a big number", func() {
+			BeforeEach(func() {
+				instance = bpdep.Instance{
+					Properties: map[string]interface{}{
+						"prop": 123456789,
+					},
+				}
+			})
+
+			It("should preserve the formatting of the number", func() {
+				propsMap, err := props.AsMap()
+				Expect(err).NotTo(HaveOccurred())
+				Expect(propsMap["prop"].(json.Number).String()).To(Equal("123456789"))
+			})
+		})
 	})
 })

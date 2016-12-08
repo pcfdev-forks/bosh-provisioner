@@ -6,6 +6,8 @@ import (
 
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 
+	"bytes"
+
 	bpdep "github.com/cppforlife/bosh-provisioner/deployment"
 	bpreljob "github.com/cppforlife/bosh-provisioner/release/job"
 )
@@ -63,13 +65,14 @@ func (p RenderProperties) deepCopyInstanceProperties() (map[string]interface{}, 
 		return result, nil
 	}
 
-	bytes, err := json.Marshal(p.instance.Properties)
+	b, err := json.Marshal(p.instance.Properties)
 	if err != nil {
 		return result, bosherr.WrapError(err, "Marshalling instance properties")
 	}
 
-	err = json.Unmarshal(bytes, &result)
-	if err != nil {
+	decoder := json.NewDecoder(bytes.NewReader(b))
+	decoder.UseNumber()
+	if err := decoder.Decode(&result); err != nil {
 		return result, bosherr.WrapError(err, "Unmarshalling instance properties")
 	}
 
