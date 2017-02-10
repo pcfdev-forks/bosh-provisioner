@@ -50,6 +50,14 @@ class TemplateEvaluationContext
     InactiveElseBlock.new
   end
 
+	def if_link(name)
+	  ActiveElseBlock.new(self)
+	end
+
+	def link(name)
+	  raise "bosh-provisioner does not support links"
+	end
+
   private
   
   def openstruct(object)
